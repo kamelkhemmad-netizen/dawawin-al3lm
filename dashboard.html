@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم | دواوين العلم</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-slate-900 text-white font-sans">
+
+    <div class="flex h-screen overflow-hidden">
+        <aside class="w-64 bg-slate-800 hidden md:block p-6">
+            <h2 class="text-2xl font-bold text-blue-400 mb-10">دواوين الإدارة</h2>
+            <nav class="space-y-4">
+                <a href="#" class="block p-3 bg-blue-600 rounded-lg flex items-center gap-3"><i class="fas fa-home"></i> الرئيسية</a>
+                <a href="#" class="block p-3 hover:bg-slate-700 rounded-lg flex items-center gap-3"><i class="fas fa-upload"></i> رفع كتاب جديد</a>
+                <a href="#" class="block p-3 hover:bg-slate-700 rounded-lg flex items-center gap-3"><i class="fas fa-file-alt"></i> إحصائيات المقالات</a>
+                <a href="#" class="block p-3 hover:bg-slate-700 rounded-lg flex items-center gap-3"><i class="fas fa-users"></i> إدارة المستخدمين</a>
+                <a href="index.html" class="block p-3 hover:bg-red-900 rounded-lg mt-20 flex items-center gap-3"><i class="fas fa-sign-out-alt"></i> العودة للموقع</a>
+            </nav>
+        </aside>
+
+        <main class="flex-1 overflow-y-auto p-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+                <div class="bg-slate-800 p-6 rounded-2xl border-b-4 border-blue-500">
+                    <p class="text-gray-400">إجمالي الكتب</p>
+                    <h3 class="text-3xl font-bold">1,250</h3>
+                </div>
+                <div class="bg-slate-800 p-6 rounded-2xl border-b-4 border-green-500">
+                    <p class="text-gray-400">زوار هذا الشهر</p>
+                    <h3 class="text-3xl font-bold">+100,000</h3>
+                </div>
+                <div class="bg-slate-800 p-6 rounded-2xl border-b-4 border-purple-500">
+                    <p class="text-gray-400">تحميلات PDF</p>
+                    <h3 class="text-3xl font-bold">45,600</h3>
+                </div>
+            </div>
+
+            <section class="bg-slate-800 p-8 rounded-2xl shadow-xl">
+                <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
+                    <i class="fas fa-cloud-upload-alt text-blue-400"></i> نشر محتوى علمي جديد
+                </h3>
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block mb-2 text-sm text-gray-400">عنوان الكتاب / البحث</label>
+                            <input type="text" class="w-full bg-slate-700 border-none rounded-lg p-3 focus:ring-2 focus:ring-blue-500 outline-none" placeholder="مثال: أثر الذكاء الاصطناعي في التعليم">
+                        </div>
+                        <div>
+                            <label class="block mb-2 text-sm text-gray-400">التصنيف</label>
+                            <select class="w-full bg-slate-700 border-none rounded-lg p-3 outline-none">
+                                <option>علوم الحاسوب</option>
+                                <option>الطب والبيولوجيا</option>
+                                <option>العلوم الإنسانية</option>
+                                <option>أبحاث التخرج</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="block mb-2 text-sm text-gray-400">وصف مختصر</label>
+                        <textarea class="w-full bg-slate-700 border-none rounded-lg p-3 h-32 outline-none" placeholder="اكتب نبذة عن المحتوى..."></textarea>
+                    </div>
+
+                    <div class="border-2 border-dashed border-slate-600 rounded-xl p-10 text-center hover:border-blue-500 transition cursor-pointer">
+                        <i class="fas fa-file-pdf text-4xl mb-4 text-gray-500"></i>
+                        <p>اسحب ملف الـ PDF هنا أو اضغط للاختيار</p>
+                        <input type="file" class="hidden">
+                    </div>
+
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg transition duration-300 shadow-lg shadow-blue-900/20">
+                        اعتماد ونشر الملف الآن
+                    </button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
