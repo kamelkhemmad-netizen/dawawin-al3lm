@@ -3,72 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>دواوين العلم | منصة المعرفة العلمية</title>
+    <title>دواوين العلم | المكتبة الرقمية العالمية</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;500;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Tajawal', sans-serif; background: #0f172a; color: white; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .hero-gradient { background: radial-gradient(circle at top right, #1e40af, transparent), radial-gradient(circle at bottom left, #7e22ce, transparent); }
+        .book-card:hover { transform: translateY(-10px) scale(1.02); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="hero-gradient min-h-screen">
 
-    <nav class="bg-white shadow-lg sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-blue-800">📚 دواوين العلم</h1>
-            <div class="hidden md:flex space-x-reverse space-x-6">
-                <a href="#library" class="hover:text-blue-600">المكتبة</a>
-                <a href="#upload" class="hover:text-blue-600">انشر علمك</a>
-                <a href="dashboard.html" class="hover:text-blue-600">لوحة التحكم</a>
-                <a href="#about" class="hover:text-blue-600">من نحن</a>
+    <nav class="sticky top-0 z-50 glass mx-4 mt-4 rounded-2xl">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <span class="text-3xl">🏛️</span>
+                <h1 class="text-2xl font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">دواوين العلم</h1>
             </div>
-            <button class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition">دخول</button>
+            <div class="hidden md:flex gap-8 font-medium">
+                <a href="#" class="hover:text-blue-400 transition">الرئيسية</a>
+                <a href="#explore" class="hover:text-blue-400 transition">تصفح الكتب</a>
+                <a href="dashboard.html" class="text-yellow-400 border border-yellow-400/30 px-4 py-1 rounded-lg hover:bg-yellow-400 hover:text-black transition">لوحة الناشر</a>
+            </div>
         </div>
     </nav>
 
-    <header class="bg-blue-900 text-white py-20 text-center px-4">
-        <h2 class="text-4xl md:text-6xl font-bold mb-4">أكبر تجمع للبحوث والمقالات العلمية</h2>
-        <p class="text-xl mb-8">منصة "دواوين العلم" .. حيث يلتقي الباحثون لنشر المعرفة</p>
-        <div class="flex justify-center gap-4">
-            <input type="text" placeholder="ابحث عن كتاب أو بحث..." class="p-4 w-full max-w-md rounded-lg text-black">
-            <button class="bg-yellow-500 px-8 py-4 rounded-lg font-bold hover:bg-yellow-400">بحث</button>
+    <header class="max-w-7xl mx-auto pt-20 pb-10 px-6 text-center">
+        <span class="bg-blue-500/10 text-blue-400 px-4 py-2 rounded-full text-sm font-bold border border-blue-500/20 mb-6 inline-block">مستقبل البحث العلمي بين يديك</span>
+        <h2 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">مستودع المعرفة <br><span class="text-blue-500">الأكثر تطوراً</span></h2>
+        <p class="text-gray-400 text-lg max-w-2xl mx-auto mb-10">ارفع، اقرأ، وانشر بحوثك العلمية في منصة عالمية تضمن لك السرعة والأمان التام.</p>
+        
+        <div class="max-w-3xl mx-auto glass p-2 rounded-2xl flex items-center shadow-2xl">
+            <input type="text" placeholder="ابحث عن كتاب، مؤلف، أو ورقة بحثية..." class="bg-transparent flex-1 px-6 py-4 outline-none text-white">
+            <button class="bg-blue-600 px-8 py-4 rounded-xl font-bold hover:bg-blue-500 transition shadow-lg shadow-blue-600/20">استكشف الآن</button>
         </div>
     </header>
 
-    <section id="library" class="max-w-7xl mx-auto py-16 px-4">
-        <h3 class="text-3xl font-bold mb-8 text-center">أحدث الإصدارات العلمية</h3>
-        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-2xl transition">
-                <img src="https://via.placeholder.com/300x400" alt="Book Cover" class="w-full h-64 object-cover">
-                <div class="p-4">
-                    <h4 class="font-bold text-lg mb-2">فيزياء الكم المتقدمة</h4>
-                    <p class="text-sm text-gray-600 mb-4">د. محمد القحطاني</p>
-                    <div class="flex justify-between">
-                        <button class="text-blue-600 font-semibold">قراءة</button>
-                        <button class="bg-gray-200 px-3 py-1 rounded">تحميل PDF</button>
+    <section class="py-20 overflow-hidden" id="explore">
+        <div class="max-w-7xl mx-auto px-6 mb-10 flex justify-between items-end">
+            <div>
+                <h3 class="text-3xl font-bold">المكتبة العالمية</h3>
+                <p class="text-gray-500">أحدث الإصدارات من الباحثين حول العالم</p>
+            </div>
+            <button class="text-blue-400 hover:underline">عرض الكل</button>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
+            <div class="book-card group cursor-pointer">
+                <div class="relative overflow-hidden rounded-2xl mb-4 aspect-[3/4] shadow-xl">
+                    <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&q=80&w=1000" class="object-cover w-full h-full grayscale group-hover:grayscale-0 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition">
+                        <button class="bg-white text-black py-2 rounded-lg font-bold text-sm mb-2">اقرأ الآن</button>
+                        <button class="bg-blue-600 text-white py-2 rounded-lg font-bold text-sm">تحميل PDF</button>
                     </div>
                 </div>
+                <h4 class="font-bold text-lg leading-tight">فيزياء الكون الحديثة</h4>
+                <p class="text-sm text-gray-500">أ.د سليم المنصوري</p>
             </div>
-        </div>
+            </div>
     </section>
 
-    <footer id="about" class="bg-white py-12 border-t">
-        <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-right">
-            <div>
-                <h4 class="text-xl font-bold mb-4">عن دواوين العلم</h4>
-                <p>منصة تعليمية متطورة تهدف لإثراء المحتوى العربي العلمي وتسهيل الوصول للأبحاث.</p>
+    <footer class="glass mt-20 py-16 border-t-0 rounded-t-[3rem]">
+        <div class="max-w-7xl mx-auto px-10 grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div class="col-span-2">
+                <h2 class="text-2xl font-bold mb-6">دواوين العلم</h2>
+                <p class="text-gray-400 leading-relaxed mb-6">نحن نؤمن أن العلم حق للجميع. منصتنا مبنية لتكون الجسر بين الباحث والمتلقي بأحدث التقنيات العالمية.</p>
+                <div class="flex gap-4">
+                    <a href="https://wa.me/yournumber" class="w-10 h-10 bg-green-600 rounded-full flex items-center justify-center hover:scale-110 transition">💬</a>
+                    <a href="mailto:info@diwan.com" class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center hover:scale-110 transition">📧</a>
+                </div>
             </div>
             <div>
-                <h4 class="text-xl font-bold mb-4">تواصل معنا</h4>
-                <p>البريد: <a href="mailto:your-email@example.com" class="text-blue-600">your-email@example.com</a></p>
-                <p>واتساب: <a href="https://wa.me/123456789" class="text-green-600">اضغط للمراسلة</a></p>
-            </div>
-            <div>
-                <h4 class="text-xl font-bold mb-4">روابط سريعة</h4>
-                <ul>
-                    <li><a href="#">سياسة الخصوصية</a></li>
-                    <li><a href="#">شروط النشر</a></li>
+                <h4 class="font-bold mb-4">روابط سريعة</h4>
+                <ul class="text-gray-500 space-y-2">
+                    <li><a href="#" class="hover:text-white">من نحن</a></li>
+                    <li><a href="#" class="hover:text-white">سياسة النشر</a></li>
+                    <li><a href="#" class="hover:text-white">اتصل بنا</a></li>
                 </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">اشترك في النشرة</h4>
+                <input type="email" placeholder="بريدك الإلكتروني" class="w-full bg-white/5 border border-white/10 rounded-lg p-3 mb-2 outline-none">
+                <button class="w-full bg-white text-black font-bold py-2 rounded-lg">اشتراك</button>
             </div>
         </div>
     </footer>
+
 </body>
-              </html>
-              
+</html>
