@@ -1,0 +1,26 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* تأثيرات الانتقال للبطاقات */
+.card-hover:hover {
+    transform: translateY(-10px);
+    transition: all 0.3s ease-in-out;
+}
+
+/* تخصيص شريط التمرير */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #1e40af;
+    border-radius: 10px;
+}
+
